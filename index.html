@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="SmartSam AI - An intelligent AI assistant for students, researchers, entrepreneurs and everyday users."
+    >
+
+    <title>SmartSam AI</title>
+
+    <!-- CSS will be connected here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         APP CONTAINER
+    ========================== -->
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">S</span>
+                    <span class="logo-text">SmartSam AI</span>
+                </div>
+
+                <button class="new-chat-btn" id="newChatBtn">
+                    + New Chat
+                </button>
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+
+                <a href="#" class="nav-item active">
+                    <span>⌂</span>
+                    <span>Home</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>🔍</span>
+                    <span>Research</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>🛠</span>
+                    <span>AI Tools</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Recent Chats -->
+            <div class="recent-chats">
+
+                <h3>Recent Chats</h3>
+
+                <div class="chat-list">
+
+                    <button class="chat-item">
+                        Explain cloud computing
+                    </button>
+
+                    <button class="chat-item">
+                        Business ideas for students
+                    </button>
+
+                    <button class="chat-item">
+                        Python programming help
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-option">
+                    ⚙ Settings
+                </button>
+
+                <button class="sidebar-option">
+                    ? Help & Support
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="main-content">
+
+            <!-- Top Header -->
+            <header class="top-header">
+
+                <div class="mobile-logo">
+                    <span class="logo-icon">S</span>
+                    <span>SmartSam AI</span>
+                </div>
+
+                <div class="header-actions">
+
+                    <button
+                        class="icon-btn"
+                        id="themeToggle"
+                        aria-label="Toggle theme"
+                    >
+                        ◐
+                    </button>
+
+                    <button class="profile-btn" id="profileBtn">
+                        <span class="profile-avatar">S</span>
+                        <span class="profile-name">Guest</span>
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 CHAT AREA
+            ========================== -->
+            <section class="chat-container">
+
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+
+                    <div class="welcome-icon">
+                        S
+                    </div>
+
+                    <h1>
+                        What can I help you with?
+                    </h1>
+
+                    <p>
+                        Ask SmartSam anything. Research, learn,
+                        create and solve problems faster.
+                    </p>
+
+
+                    <!-- Suggestion Cards -->
+                    <div class="suggestions">
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">📚</span>
+
+                            <div>
+                                <strong>Study & Learn</strong>
+
+                                <p>
+                                    Understand difficult topics
+                                    with simple explanations.
+                                </p>
+                            </div>
+                        </button>
+
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">🔎</span>
+
+                            <div>
+                                <strong>Research</strong>
+
+                                <p>
+                                    Explore topics and organize
+                                    useful information.
+                                </p>
+                            </div>
+                        </button>
+
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">💻</span>
+
+                            <div>
+                                <strong>Coding</strong>
+
+                                <p>
+                                    Learn programming and
+                                    troubleshoot your code.
+                                </p>
+                            </div>
+                        </button>
+
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">💼</span>
+
+                            <div>
+                                <strong>Business</strong>
+
+                                <p>
+                                    Develop ideas and solve
+                                    business problems.
+                                </p>
+                            </div>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Messages will appear here -->
+                <div
+                    class="messages"
+                    id="messages"
+                    aria-live="polite"
+                >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 CHAT INPUT AREA
+            ========================== -->
+            <section class="input-section">
+
+                <form
+                    class="chat-form"
+                    id="chatForm"
+                >
+
+                    <div class="input-wrapper">
+
+                        <textarea
+                            id="userInput"
+                            name="message"
+                            rows="1"
+                            placeholder="Ask SmartSam anything..."
+                            aria-label="Ask SmartSam a question"
+                        ></textarea>
+
+
+                        <div class="input-actions">
+
+                            <button
+                                type="button"
+                                class="attachment-btn"
+                                id="attachmentBtn"
+                                aria-label="Attach a file"
+                            >
+                                +
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="send-btn"
+                                id="sendBtn"
+                                aria-label="Send message"
+                            >
+                                ➤
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <p class="input-disclaimer">
+                        SmartSam AI can make mistakes. Verify important information.
+                    </p>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
